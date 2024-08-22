@@ -1,4 +1,6 @@
 // script.js
+const timeZonesAll = Intl.supportedValuesOf('timeZone');
+
 function updateDateTime() {
     const now = new Date();
     const dateTimeString = now.toLocaleString();
@@ -11,7 +13,7 @@ function getCurrentTimeZone() {
 }
 
 function updateCountryTimes() {
-    const timeZones = {
+       const timeZones = {
         NewYork: 'America/New_York',
         London: 'Europe/London',
         Tokyo: 'Asia/Tokyo',
@@ -30,10 +32,29 @@ function updateCountryTimes() {
     }
 }
 
+function updateAsiaZoneTime() {
+    
+    const tableBody = document.getElementById('tableAsia');
+    timeZonesAll.forEach(timeZone => {
+        const row = document.createElement('tr');
+
+        const timeZoneCell = document.createElement('td');
+        timeZoneCell.textContent = timeZone;
+        row.appendChild(timeZoneCell);
+
+        const timeCell = document.createElement('td');
+        timeCell.id = `time${timeZone.replace(/\//g, '_')}`; // Replace '/' with '_' for valid HTML id
+        row.appendChild(timeCell);
+
+        tableBody.appendChild(row);
+    });
+}
+
 // Call the function to update the date and time immediately
 updateDateTime();
 getCurrentTimeZone();
 updateCountryTimes();
+updateAsiaZoneTime();
 
 // Optionally, update the date and time every second
 setInterval(updateDateTime, 1000);
