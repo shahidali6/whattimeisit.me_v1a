@@ -15,7 +15,7 @@ function createAllTimeZoneCards() {
     // Split time zone into region and city
     const region = timeZone.substring(0, timeZone.indexOf("/"));
     const city = timeZone.substring(timeZone.indexOf("/") + 1, timeZone.length).replace(/\//g, '--').replace(/_/g, '-');   // Replace '/' with ' - ' for better display
-    console.log(index + " Region:[" + region+ "] City:[" + city+"]");
+    //console.log(index + " Region:[" + region+ "] City:[" + city+"]");
 
     // Clone the card element
     const newCard = cardTemplate.cloneNode(true);

@@ -32,26 +32,43 @@
     <header class="pt-5">
         <div class="container pt-4 pt-xl-5">
             <div class="row mb-2">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">All Time Zones</span></h2>
+                <div class="col-12 col-md-8 col-xl-6 text-center mx-auto" style="width: 100%;">
+                    <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">Time Zones</span></h2>
                     <p class="text-muted mb-5">A time zone is an area which observes a uniform standard time for legal, commercial and social purposes. Time zones tend to follow the boundaries between countries and their subdivisions instead of strictly following longitude, because it is convenient for areas in frequent communication to keep the same time.</p>
                 </div>
             </div>
+            <div class="row mb-2">
+                <div class="col-auto col-md-8 col-xl-6 text-center" style="width: 100%;">
+                    <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">Time Zone Filters</span></h2>
+                    <div class="row justify-content-center">
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Asia</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Europe</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Africa</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">America</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Antarctica</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Arctic</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Atlantic</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Australia</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Indian</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Pacific</button></div>
+                    </div>
+                </div>
+            </div>
             <div class="row pt-5" id="card-row">
-                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 text-center text-md-start align-self-center mx-auto" id="first-card" style="padding-bottom: 10px;">
+                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 text-center text-md-start m-auto" id="first-card" style="padding-bottom: 10px;">
                     <div class="text-center">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-auto text-end"><img class="flag" src="/assets/img/flag/cn.png" style="background: var(--bs-primary-bg-subtle);"></div>
-                                    <div class="col-auto text-start m-auto">
+                                    <div class="col-auto"><img class="flag" src="/assets/img/flag/cn.png" style="background: var(--bs-primary-bg-subtle);border-style: double;"></div>
+                                    <div class="col">
                                         <h4 class="time-zone-city">City Name</h4>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-auto"><span class="badge rounded-pill bg-secondary text-primary time-zone-region" style="font-weight: bold;font-size: 14px;">Region</span></div>
-                                    <div class="col-auto align-self-center">
-                                        <h6 class="text-muted mb-2 current-time" id="time">Current Time</h6>
+                                    <div class="col-auto"><span class="badge bg-primary time-zone-region" style="font-weight: bold;font-size: 14px;">Region</span></div>
+                                    <div class="col">
+                                        <h6 id="time" class="mb-2 current-time">Current Time</h6>
                                     </div>
                                 </div>
                             </div>
@@ -61,206 +78,6 @@
             </div>
         </div>
     </header>
-    <section class="py-4 py-xl-5 mb-5">
-        <div class="container">
-            <div class="row mb-2">
-                <div class="col">
-                    <div class="accordion text-muted" role="tablist" id="accordion-3">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-1" aria-expanded="true" aria-controls="accordion-3 .item-1">Asia</button></h2>
-                            <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAsia-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-2" aria-expanded="false" aria-controls="accordion-3 .item-2">Europe</button></h2>
-                            <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableEurope-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-3" aria-expanded="false" aria-controls="accordion-3 .item-3">Africa</button></h2>
-                            <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAfrica-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-4" aria-expanded="false" aria-controls="accordion-3 .item-4">America</button></h2>
-                            <div class="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAmerica-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-5" aria-expanded="false" aria-controls="accordion-3 .item-5">Antarctica</button></h2>
-                            <div class="accordion-collapse collapse item-5" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAntarctica-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-6" aria-expanded="false" aria-controls="accordion-3 .item-6">Arctic</button></h2>
-                            <div class="accordion-collapse collapse item-6" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableArctic-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-7" aria-expanded="false" aria-controls="accordion-3 .item-7">Atlantic</button></h2>
-                            <div class="accordion-collapse collapse item-7" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAtlantic-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-8" aria-expanded="false" aria-controls="accordion-3 .item-8">Australia</button></h2>
-                            <div class="accordion-collapse collapse item-8" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableAustralia-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-9" aria-expanded="false" aria-controls="accordion-3 .item-9">Indian</button></h2>
-                            <div class="accordion-collapse collapse item-9" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tableIndian-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-3 .item-10" aria-expanded="false" aria-controls="accordion-3 .item-10">Pacific</button></h2>
-                            <div class="accordion-collapse collapse item-10" role="tabpanel" data-bs-parent="#accordion-3">
-                                <div class="accordion-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sr.#</th>
-                                                    <th>Time Zone</th>
-                                                    <th>Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="tablePacific-3"></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="container py-4 py-lg-5">
             <div class="row row-cols-2 row-cols-md-4">
