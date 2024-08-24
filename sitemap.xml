@@ -4,18 +4,15 @@
         <loc>https://whattimeisit.me/404.html</loc>
     </url>
     <url>
-        <loc>https://whattimeisit.me/contacts.html</loc>
+        <loc>https://whattimeisit.me/cities.html</loc>
     </url>
     <url>
-        <loc>https://whattimeisit.me/faq.html</loc>
-    </url>
-    <url>
-        <loc>https://whattimeisit.me/features.html</loc>
+        <loc>https://whattimeisit.me/countries.html</loc>
     </url>
     <url>
         <loc>https://whattimeisit.me/</loc>
     </url>
     <url>
-        <loc>https://whattimeisit.me/integrations.html</loc>
+        <loc>https://whattimeisit.me/timezones.html</loc>
     </url>
 </urlset>
