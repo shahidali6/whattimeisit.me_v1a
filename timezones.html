@@ -41,16 +41,17 @@
                 <div class="col-auto col-md-8 col-xl-6 text-center" style="width: 100%;">
                     <h2 class="display-6 fw-bold mb-5"><span class="pb-3 underline">Time Zone Filters</span></h2>
                     <div class="row justify-content-center">
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Asia</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Europe</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Africa</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">America</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Antarctica</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Arctic</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Atlantic</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Australia</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Indian</button></div>
-                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button">Pacific</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAllTimeZoneCards()">All</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAsiaTimeZoneCards()">Asia</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createEuropeTimeZoneCards()">Europe</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAfricaTimeZoneCards()">Africa</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAmericaTimeZoneCards()">America</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAntarcticaTimeZoneCards()">Antarctica</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createArcticTimeZoneCards()">Arctic</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAtlanticTimeZoneCards()">Atlantic</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createAustraliaTimeZoneCards()">Australia</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createIndianTimeZoneCards()">Indian</button></div>
+                        <div class="col-auto" style="padding: 5px ;"><button class="btn btn-primary" type="button" onclick="createPacificTimeZoneCards()">Pacific</button></div>
                     </div>
                 </div>
             </div>
@@ -81,11 +82,11 @@
     <footer>
         <div class="container py-4 py-lg-5">
             <div class="row row-cols-2 row-cols-md-4">
-                <div class="col-12 col-md-3">
+                <div class="col-auto col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="fw-bold d-flex align-items-center mb-2"><span>What Time is it</span></div>
-                    <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                    <p class="text-muted">What time is it is a website that provides accurate and up-to-date information on local times, time zones, daylight savings time (DST), time zone differences, holidays, and more for locations around the world.</p>
                 </div>
-                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                <div class="col-auto col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2 text-lg-start d-flex flex-column">
                     <h3 class="fs-6 fw-bold">Services</h3>
                     <ul class="list-unstyled">
                         <li><a href="#">Web design</a></li>
@@ -93,7 +94,7 @@
                         <li><a href="#">Hosting</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                <div class="col-auto col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2 text-lg-start d-flex flex-column">
                     <h3 class="fs-6 fw-bold">About</h3>
                     <ul class="list-unstyled">
                         <li><a href="#">Company</a></li>
@@ -101,7 +102,7 @@
                         <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 text-lg-start d-flex flex-column">
+                <div class="col-auto col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2 text-lg-start d-flex flex-column">
                     <h3 class="fs-6 fw-bold">Careers</h3>
                     <ul class="list-unstyled">
                         <li><a href="#">Job openings</a></li>
@@ -128,9 +129,10 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/const.js"></script>
+    <script src="/assets/js/card-generation.js"></script>
     <script src="/assets/js/startup-modern.js"></script>
     <script src="/assets/js/time.js"></script>
-    <script src="/assets/js/timezone-card.js"></script>
 </body>
 
 </html>
