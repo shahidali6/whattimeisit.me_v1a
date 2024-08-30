@@ -6,7 +6,7 @@ function removeAllChildsOfElement() {
   }
 }
 
-function createCard(timeZone) {
+function createCard(timeZone, index) {
   // Split time zone into region and city
   const region = timeZone.substring(0, timeZone.indexOf("/"));
   const city = timeZone
@@ -17,6 +17,7 @@ function createCard(timeZone) {
   // Clone the card element
   const newCard = cardTemplate.cloneNode(true);
   newCard.id = ""; // Clear the id attribute to avoid duplicates
+  newCard.querySelector(".counter").textContent=++index;
   newCard.querySelector("#time").id = "time" + city;
 
   // Update the card content
@@ -31,8 +32,20 @@ function createCard(timeZone) {
 
   // Assuming the card has elements to display the time zone and current time
   newCard.querySelector(".time-zone-city").textContent = city;
+  newCard
+  .querySelector(".time-zone-city-link")
+  .setAttribute("href", "/city/" + city + ".html");
   newCard.querySelector(".time-zone-region").textContent = region;
+  newCard
+    .querySelector(".time-zone-region")
+    .setAttribute("href", "/region/" + region + ".html");
   newCard.querySelector(".current-time").textContent = timeString;
+  newCard
+    .querySelector(".flag")
+    .setAttribute("src", "/flags/32/" + CityToCountryCode[city] + ".png");
+  newCard
+    .querySelector(".flag-link")
+    .setAttribute("href", "/country/" + CityToCountryName[city] + ".html");
 
   return newCard;
 }
@@ -41,8 +54,8 @@ function createAllTimeZoneCards() {
   removeAllChildsOfElement();
   //const cardRow = document.getElementById("card-row");
 
-  timeZonesAll.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAll.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -50,8 +63,8 @@ function createAllTimeZoneCards() {
 function createAsiaTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAsia.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAsia.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -59,8 +72,8 @@ function createAsiaTimeZoneCards() {
 function createEuropeTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesEurope.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesEurope.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -68,8 +81,8 @@ function createEuropeTimeZoneCards() {
 function createAfricaTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAfrica.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAfrica.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -77,8 +90,8 @@ function createAfricaTimeZoneCards() {
 function createAmericaTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAmerica.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAmerica.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -86,8 +99,8 @@ function createAmericaTimeZoneCards() {
 function createAntarcticaTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAntarctica.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAntarctica.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -95,8 +108,8 @@ function createAntarcticaTimeZoneCards() {
 function createArcticTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesArctic.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesArctic.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -104,8 +117,8 @@ function createArcticTimeZoneCards() {
 function createAtlanticTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAtlantic.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAtlantic.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -113,8 +126,8 @@ function createAtlanticTimeZoneCards() {
 function createAustraliaTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesAustralia.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesAustralia.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -122,8 +135,8 @@ function createAustraliaTimeZoneCards() {
 function createIndianTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesIndian.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesIndian.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
@@ -131,8 +144,8 @@ function createIndianTimeZoneCards() {
 function createPacificTimeZoneCards() {
   removeAllChildsOfElement();
 
-  timeZonesPacific.forEach((timeZone) => {
-    const newCard = createCard(timeZone);
+  timeZonesPacific.forEach((timeZone, index) => {
+    const newCard = createCard(timeZone, index);
     cardRow.appendChild(newCard);
   });
 }
